@@ -1,0 +1,25 @@
+buildscript {
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.2.13.RELEASE"
+    }
+}
+
+apply plugin: "java"
+apply plugin: "org.springframework.boot"
+
+group 'me.threedr3am.bug.spring.cloud.netflix.hystrix'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix-dashboard', version: '2.2.9.RELEASE'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.2.13.RELEASE'
+}
